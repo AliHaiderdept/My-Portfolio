@@ -11,18 +11,20 @@ import About from "./About.jsx";
 import Dashboard from "./Dashboard.jsx";
 import Footer from "./Footer.jsx";
 import { incrementVisitorsCount } from "./statsApi";
+
+const VISITOR_GUARD_KEY = "__portfolioVisitorTracked";
+
 function App() {
   useEffect(() => {
-    const visitorSessionKey = "portfolio-visitor-counted";
-    const isVisitorCounted = sessionStorage.getItem(visitorSessionKey) === "1";
+    if (!window[VISITOR_GUARD_KEY]) {
+      window[VISITOR_GUARD_KEY] = true;
 
-    if (!isVisitorCounted) {
       incrementVisitorsCount()
         .then(() => {
-          sessionStorage.setItem(visitorSessionKey, "1");
           window.dispatchEvent(new CustomEvent("portfolio-stats-updated"));
         })
         .catch((error) => {
+          window[VISITOR_GUARD_KEY] = false;
           console.error("Failed to increment visitors counter", error);
         });
     }
