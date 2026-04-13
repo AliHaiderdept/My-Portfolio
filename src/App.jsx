@@ -10,8 +10,23 @@ import SilkBackground from "./SilkBackground.jsx";
 import About from "./About.jsx";
 import Dashboard from "./Dashboard.jsx";
 import Footer from "./Footer.jsx";
+import { incrementVisitorsCount } from "./statsApi";
 function App() {
   useEffect(() => {
+    const visitorSessionKey = "portfolio-visitor-counted";
+    const isVisitorCounted = sessionStorage.getItem(visitorSessionKey) === "1";
+
+    if (!isVisitorCounted) {
+      incrementVisitorsCount()
+        .then(() => {
+          sessionStorage.setItem(visitorSessionKey, "1");
+          window.dispatchEvent(new CustomEvent("portfolio-stats-updated"));
+        })
+        .catch((error) => {
+          console.error("Failed to increment visitors counter", error);
+        });
+    }
+
     const sections = Array.from(document.querySelectorAll("section"));
     const glowTargets = Array.from(document.querySelectorAll("section .glass"));
 

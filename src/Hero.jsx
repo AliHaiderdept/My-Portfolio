@@ -39,7 +39,7 @@ function Hero() {
       <div className="hero-image-frame">
         <img
           className="hero-image"
-          src="https://i.pinimg.com/736x/64/25/d9/6425d9533e83434d24d667db3dbe79bf.jpg"
+          src="/assets/cat-remove.png"
           alt="Ali Haider portrait"
         />
       </div>

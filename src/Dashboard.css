@@ -1,8 +1,9 @@
 .dashboard-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(2, minmax(240px, 320px));
+  justify-content: center;
   gap: clamp(16px, 2.8vw, 30px);
-  width: min(1100px, calc(100% - 32px));
+  width: min(760px, calc(100% - 32px));
   margin: 0 auto 28px;
 }
 
@@ -73,14 +74,9 @@
   color: var(--accent);
 }
 
-@media (min-width: 768px) {
-  .dashboard-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
-
 @media (max-width: 640px) {
   .dashboard-grid {
+    grid-template-columns: 1fr;
     width: min(100% - 20px, 1100px);
     margin-bottom: 18px;
   }
