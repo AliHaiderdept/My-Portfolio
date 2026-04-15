@@ -629,6 +629,10 @@ section {
   max-width: 620px;
 }
 
+.hero-copy > * {
+  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
 #hero.section-drop-init .hero-copy > *,
 #hero.section-drop-init .hero-image-frame {
   opacity: 0;
@@ -638,6 +642,12 @@ section {
 #hero.section-drop-init .hero-image-frame {
   transform: translateY(28px) scale(0.72);
   transform-origin: center center;
+}
+
+#hero:not(.section-drop-init) .hero-copy > *,
+#hero:not(.section-drop-init) .hero-image-frame {
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }
 
 #hero.section-drop-init.section-drop-active .hero-copy > :nth-child(1) {
@@ -681,7 +691,7 @@ footer {
   box-shadow: none;
   filter: drop-shadow(0 0 18px rgba(120, 200, 255, 0.22)) drop-shadow(0 0 42px rgba(124, 58, 237, 0.18));
   transform: translateZ(0);
-  transition: transform 0.34s cubic-bezier(0.22, 1, 0.36, 1), filter 0.34s ease;
+  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
   will-change: transform, filter;
 }
 
@@ -694,21 +704,21 @@ footer {
   border-radius: 0;
   border: 0;
   box-shadow: none;
-  transition: transform 0.34s cubic-bezier(0.22, 1, 0.36, 1), filter 0.34s ease;
+  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
   transform: none;
   filter: drop-shadow(0 0 12px rgba(120, 200, 255, 0.18));
 }
 
 .hero-image-frame:hover,
 .hero-image-frame:focus-within {
-  transform: translateY(-6px) scale(1.04);
-  filter: drop-shadow(0 0 24px rgba(120, 200, 255, 0.28)) drop-shadow(0 0 56px rgba(124, 58, 237, 0.24));
+  transform: translateY(-12px) scale(1.12);
+  filter: drop-shadow(0 0 40px rgba(120, 200, 255, 0.4)) drop-shadow(0 0 80px rgba(124, 58, 237, 0.32));
 }
 
 .hero-image-frame:hover .hero-image,
 .hero-image-frame:focus-within .hero-image {
-  transform: scale(1.03);
-  filter: drop-shadow(0 0 18px rgba(120, 200, 255, 0.24));
+  transform: scale(1.08);
+  filter: drop-shadow(0 0 32px rgba(120, 200, 255, 0.4));
 }
 
 @keyframes heroBorderShift {
