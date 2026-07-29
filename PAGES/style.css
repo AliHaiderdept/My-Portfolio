@@ -1,0 +1,278 @@
+.bg {
+    background : url(https://i.pinimg.com/736x/5a/c1/69/5ac16962af8b6fb39e57187704226b74.jpg) no-repeat center center/cover;
+    min-height: 100vh;
+    margin:0;
+    align-items: center;
+    justify-content: center;
+    min-height: 80px;
+}
+.navbar {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 40px;
+    padding: 10px;
+    font-size: 1.2rem;
+    color: white;
+    background: rgba(255,255,255,0.2);
+    background: rgba(0,0,0,0.2);
+    border: 1px solid rgba(255,255,255,0.2);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    backdrop-filter: blur(10px) ;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: flex-start; /* align to start */
+    align-items: center;
+    gap: 40px;
+}
+#read {
+    padding: 10px;
+    font-weight: bolder;
+    border: none;
+    border-radius: 6px;
+    margin:0;
+    color: white;
+    cursor: pointer;
+     transition: all 0.4s ease;
+    background-color: rgb(107, 38, 216);
+}
+#link {
+    padding: 10px;
+    font-weight: bolder;
+    border: none;
+    border-radius: 6px;
+    margin:0;
+    color: white;
+    background-color: rgb(107, 38, 216);
+    cursor: pointer;
+     transition: all 0.4s ease;
+}
+#read:hover {
+        transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+}
+#link:hover {
+        transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+}
+.home {
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    background: rgba(0,0,0,0.2);
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+    margin :40px;
+    position: relative;
+    padding: 40px;
+    border-radius: 20px;  
+    border: 1px solid rgba(255,255,255,0.2);
+  position: relative;
+
+    transition: all 0.4s ease;
+}
+
+/* Hover effect */
+.home:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+}
+
+.home::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    padding: 2px;
+
+    background: linear-gradient(45deg, #cd1ca9, #0cad4f, #0dbbc8);
+    background-size: 300% 300%;
+
+    animation: borderGlow 6s linear infinite;
+     mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+}
+
+@keyframes borderGlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+.home img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(0, 255, 191, 0.7);
+}
+/*----Additionals------*/
+.home, .About, .Skills {
+    margin: 5%;         /* instead of 40px */
+    padding: 2rem;      /* instead of 40px */
+    width: auto;
+}
+h2 {
+    padding: 0 5%;
+    font-size: 2rem;    /* instead of fixed 2.3rem */
+}
+.home img {
+    width: 20%;
+    max-width: 120px;   /* scales down on small screens */
+    height: auto;
+}
+ul {
+    display: flex;
+    flex-wrap: wrap;    /* allow items to wrap on small screens */
+    justify-content: center; /* center instead of fixed start */
+    gap: 1rem;          /* smaller, relative gap */
+}
+h2 {
+    padding-right: 300px;
+    font-size: 2.3rem;
+    font-family: jjk;
+}
+
+.home {
+    animation: floatCard 4s ease-in-out infinite;
+}
+
+@keyframes floatCard {
+    0%   { transform: translateY(0px); }
+    50%  { transform: translateY(-8px); }
+    100% { transform: translateY(0px); }
+}
+
+.navbar::before {
+     content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 0px;
+    padding: 2px;
+
+    background: linear-gradient(45deg, #f309c4, #9a1131, #0d9cc8);
+    background-size: 300% 300%;
+
+    animation: borderGlow 6s linear infinite;
+     mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+}
+.About {
+    color:white;
+    text-align: center;
+     overflow: hidden;
+    background: rgba(0,0,0,0.2);
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+    margin :40px;
+    position: relative;
+    padding: 40px;
+    border-radius: 20px;  
+    border: 1px solid rgba(255,255,255,0.2);
+  position: relative;
+   transition: all 0.4s ease;
+}
+
+/* Hover effect */
+.About:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+}
+.About::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    padding: 2px;
+
+    background: linear-gradient(45deg, #cd1ca9, #0cad4f, #0dbbc8);
+    background-size: 300% 300%;
+
+    animation: borderGlow 6s linear infinite;
+     mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+}
+.About {
+    animation: floatCard 4s ease-in-out infinite;
+}
+.Skills {
+    color:white;
+    text-align: center;
+    overflow: hidden;
+    background: rgba(0,0,0,0.2);
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+    margin :40px;
+    position: relative;
+    padding: 40px;
+    border-radius: 20px;  
+    border: 1px solid rgba(255,255,255,0.2);
+    position: relative;
+    transition: all 0.4s ease;
+}
+.lang {
+    display:flex;
+
+}
+.Skills::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    padding: 2px;
+
+    background: linear-gradient(45deg, #cd1ca9, #0cad4f, #0dbbc8);
+    background-size: 300% 300%;
+
+    animation: borderGlow 6s linear infinite;
+     mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+}
+.Skills{
+    animation: floatCard 4s ease-in-out infinite;
+}
+
+/*@media screen and (max-width: 768px) {
+    .home, .About, .Skills {
+        margin: 2%;
+        padding: 1.5rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+        padding: 0 2%;
+    }
+    ul {
+        gap: 0.5rem;
+    }
+    .home img {
+        width: 30%;
+    }
+}*/
