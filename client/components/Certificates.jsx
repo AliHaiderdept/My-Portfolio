@@ -18,8 +18,8 @@ export default function Certificates() {
     <div className="certificate-preview-grid">
       {[
         "/certificates/Gen AI Sticker.png",
-        "/certificates/certificate-2.png",
-        "/certificates/certificate-3.png",
+        "/certificates/Claude Ai Fluency.png",
+        
       ].map((image, index) => (
         <Reveal key={image} delay={(index + 1) * 80}>
           <Tilt3D max={10}>

@@ -132,7 +132,7 @@ export default function TopNav() {
 
           <a
             className="button button-glass nav-resume"
-            href="/Ali-Haider-Resume.pdf"
+            href="/Ali Haider Resume.jpg"
             download
           >
             Resume

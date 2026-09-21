@@ -20,48 +20,14 @@ const certificates = [
 
   {
     id: 2,
-    title: "Certificate 02",
-    issuer: "",
-    date: "",
-    description: "",
-    image: "",
+    title: "Ai Fluency: Frameworks and Fundamentals",
+    issuer: "Cluade AI",
+    date: "14 September 2026",
+    description: "A fluent AI understanding and fundamental approach to techinal and effective prompting and communication with Ai as Human/AI interactions",
+    image: "/certificates/Claude Ai Fluency.png",
   },
 
-  {
-    id: 3,
-    title: "Certificate 03",
-    issuer: "",
-    date: "",
-    description: "",
-    image: "",
-  },
-
-  {
-    id: 4,
-    title: "Certificate 04",
-    issuer: "",
-    date: "",
-    description: "",
-    image: "",
-  },
-
-  {
-    id: 5,
-    title: "Certificate 05",
-    issuer: "",
-    date: "",
-    description: "",
-    image: "",
-  },
-
-  {
-    id: 6,
-    title: "Certificate 06",
-    issuer: "",
-    date: "",
-    description: "",
-    image: "",
-  },
+  
 ];
 
 export default function CertificatesPageClient() {

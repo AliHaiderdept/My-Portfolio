@@ -6,11 +6,11 @@ import { useEffect, useState } from "react";
 const roles = [
   "Full-Stack AI Assisted Developer",
   "AI/ML Learner",
-  "API Integration & Monitoring",
-  "Graphic Designer",
-  "Motion Graphics Designer",
-  "Cloud Infrastructure & Deployment",
-  "Data Analytics & Management"
+  "Data Analyst",
+  "API Manager",
+  "UI/UX Designer",
+  "Cybersecurity Analyst",
+  "Cloud Service Provider",
 ];
 
 export default function TextLoop() {

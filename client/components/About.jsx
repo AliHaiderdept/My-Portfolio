@@ -4,11 +4,12 @@ import Tilt3D from "./Tilt3D";
 
 const cards = [
   ["Full-Stack", "Backend systems + responsive frontends, end to end."],
-  ["AI Integration", "Bringing model-powered features into real products."],
+  ["AI/ML", "Bringing trained model-powered features into real products."],
   ["Clean Code", "Modular, readable and maintainable by default."],
   ["Performance", "Efficient, high-performance, low-friction builds."],
-  ["User-Centered", "Design decisions driven by the person using it."],
-  ["Mobile Next", "Expanding into cross-platform mobile applications."]
+  ["Security Maintainance", "Using secure and safe tough parametersa nd techniques to protect softwares."],
+  ["Mobile Next", "Expanding into cross-platform mobile applications."],
+  ["Data Analysis", "Using clean datasets and using ccognitive machine learned patterns for analysis."]
 ];
 
 export default function About() {
@@ -28,9 +29,9 @@ export default function About() {
                   <p>
                     I am a passionate undergraduate BSCS student and Full-Stack Developer focused on building scalable
                     backend systems and responsive web applications. I specialize in efficient, high-performance
-                    solutions while keeping code clean and modular. Looking ahead, I am integrating Artificial
-                    Intelligence into my web applications and expanding into mobile apps, creating smarter and more
-                    versatile digital solutions.
+                    solutions while keeping code clean, fast and modular. Looking ahead, I am working on Machine Learning and Artificial
+                    Intelligence to make clean,accurate and consistent datasets for future predicted contents in my web applications and expanding into mobile apps, creating smarter and more
+                    versatile digital solutions. I also keep maintainance of security over software solutions to safe from unknown or unpredictable from misleads and unauthorized attackes using cyber and strong networking practical techniques.
                   </p>
                 </div>
               </Tilt3D>

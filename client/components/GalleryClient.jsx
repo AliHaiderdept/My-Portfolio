@@ -14,8 +14,8 @@ const projects = [
     tag: "Healthcare Platform",
     description:
       "A hospital management experience with appointment flows, department listings and a responsive patient-facing interface.",
-    stack: ["React", "Vite", "Vercel"],
-    image:"/.png",
+    stack: ["React", "Vite", "Vercel", "Javascript"],
+    image:"/projects/medixora-hospital.png",
     href: "https://medixora-hospital.vercel.app/"
   },
   {
@@ -24,41 +24,37 @@ const projects = [
     tag: "E-commerce",
     description:
       "Storefront frontend with product grids, cart interactions and a clean responsive shopping presentation.",
-    stack: ["React", "CSS", "Vercel"],
+    stack: ["React", "CSS", "Vercel", "Javascript"],
+    image : "/projects/glorymart.png",
     href: "https://project-glorymart-frontend-sigma.vercel.app/"
   },
   {
-    id: "slot-03",
-    title: "Project Slot 03",
-    tag: "Add your project",
-    description: "Empty card ready for your next project details.",
-    stack: ["Your Stack"],
-    href: "#"
+    id: "sutra",
+    title: "Sutra Design",
+    tag: "UI Design",
+    description: "Textile designs ellaboration to maximize the industrial workflows",
+    stack: ["HTML5", "Modern CSS", "Graphics"],
+    image : "/projects/sutra-design.png",
+    href: "https://github.com/AliHaiderdept/tana-Textile-Design-UI"
   },
   {
-    id: "slot-04",
-    title: "Project Slot 04",
-    tag: "Add your project",
-    description: "Empty card ready for your next project details.",
-    stack: ["Your Stack"],
-    href: "#"
+    id: "flipper",
+    title: "Flipper Music Player",
+    tag: "Music Player (Web App)",
+    description: "An easy access and fast periodic music player which brings unstoppable music listening.",
+    stack: ["Next.js","Typescript","Node.js", "Express.js"],
+    href: "https://github.com/AliHaiderdept/flipper-music-project"
   },
   {
-    id: "slot-05",
-    title: "Project Slot 05",
-    tag: "Add your project",
+    id: "mythiorapy",
+    title: "Mythiorapy",
+    tag: "Mental Health Analyzer",
     description: "Empty card ready for your next project details.",
-    stack: ["Your Stack"],
+    stack: [""],
+    image :"/projects/flipper-music.png",
     href: "#"
   },
-  {
-    id: "slot-06",
-    title: "Project Slot 06",
-    tag: "Add your project",
-    description: "Empty card ready for your next project details.",
-    stack: ["Your Stack"],
-    href: "#"
-  }
+  
 ];
 
 export default function GalleryClient() {
@@ -89,6 +85,11 @@ export default function GalleryClient() {
                 <Tilt3D max={8}>
                   <article className="glass-card archive-card">
                     <span className="card-top-line" />
+                    <div className="project-image-placeholder">
+                      {project.image ? (
+                        <img src={project.image} alt={`${project.title} preview`} />
+                      ) : null}
+                    </div>
                     <p className="project-tag">{project.tag}</p>
                     <h2>{project.title}</h2>
                     <p>{project.description}</p>

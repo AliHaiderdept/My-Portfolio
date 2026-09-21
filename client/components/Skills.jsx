@@ -9,7 +9,8 @@ const groups = [
   ["AI", ["AI Integration", "Prompt Engineering","Generative AI", "LLM's Model Features", "AI fluency"]],
   ["UI/UX Design",["Figma", "Canva","Adobe Illustrator"]],
   ["App Development",["React Native","Electron", "Flutter","Swift","Go"]],
-  ["Deployment",["Vercel","Railway","Render","Netlify","Azure","AWS","Github","Firebase"]]
+  ["Deployment",["Vercel","Railway","Render","Netlify","Azure","AWS","Github","Firebase"]],
+  ["CyberSecurity",["Cloud computing(AWS)","Linux Commands","Networking","Red/Blue Team"]]
   
 ];
 

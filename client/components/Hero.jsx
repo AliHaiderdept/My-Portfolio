@@ -13,7 +13,7 @@ export default function Hero() {
 
         <Reveal className="hero-copy">
           <span className="eyebrow">
-            <Boxes size={15} /> Full-Stack Developer
+            <Boxes size={15} /> AI Full-Stack Developer
           </span>
 
           <p className="hero-fancy">Hey, I&apos;m</p>
@@ -33,15 +33,15 @@ export default function Hero() {
           </p>
 
           <p className="hero-description">
-            BSCS student in Lahore, Pakistan, building scalable backends and responsive web applications with clean,
-            modular code.
+            BSCS student in Lahore, Pakistan, building scalable, secure and consistent software designs and responsive applications with clean,
+            revised code.
           </p>
 
           <div className="hero-actions">
             <a className="button button-primary" href="#projects">
               View Projects <ArrowDownRight size={17} />
             </a>
-            <a className="button button-glass" href="/Ali-Haider-Resume.pdf" download>
+            <a className="button button-glass" href="/Ali Haider Resume.jpg" download>
               Download Resume <Download size={16} />
             </a>
           </div>
