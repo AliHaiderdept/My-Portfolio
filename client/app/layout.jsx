@@ -1,9 +1,15 @@
-import { Bricolage_Grotesque, Chivo_Mono, Sora } from "next/font/google";
+import { Bricolage_Grotesque, Chivo_Mono, Sora, Geist } from "next/font/google";
 import { Toaster } from "sonner";
-import Background from "../components/Background";
-import CursorScroll from "../components/CursorScroll";
-import TopNav from "../components/TopNav";
 import "../styles/globals.css";
+import { GeistSans } from "geist/font/sans";
+import { GeistMono } from "geist/font/mono";
+import { GeistPixelSquare } from "geist/font/pixel";
+import { cn } from "@/lib/utils";
+import Navbar from "@/components/Navbar";
+import Preloader from "@/components/Preloader";
+import Background3D from "@/components/Background3D";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 const display = Bricolage_Grotesque({
   subsets: ["latin"],
@@ -48,12 +54,11 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${display.variable} ${body.variable} ${mono.variable}`}>
-      <body>
-        <Background />
-        <CursorScroll />
-        <TopNav />
-        <div className="app">{children}</div>
+    <html lang="en" className={cn(display.variable, body.variable, mono.variable, GeistPixelSquare.variable, GeistSans.variable, GeistMono.variable, "font-sans", geist.variable)}>
+      <body >
+        <Preloader/>
+        <Navbar />
+        <div className="app ">{children}</div>
         <Toaster position="bottom-right" richColors />
       </body>
     </html>
