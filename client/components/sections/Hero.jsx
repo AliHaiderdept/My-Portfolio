@@ -28,16 +28,7 @@ export default function Hero() {
       id="home"
       className="isolate relative flex min-h-screen items-center overflow-hidden px-6 md:px-12"
     >
-      <video
-        className="hero-bg pointer-events-none absolute inset-0 z-0 h-full w-full object-cover"
-        autoPlay
-        muted
-        loop
-        playsInline
-        aria-hidden="true"
-      >
-        <source src="/animations/hero-bg.mp4" type="video/mp4" />
-      </video>
+     
       <div className="relative z-10 flex w-full flex-col items-center justify-center gap-2 text-center">
         <SplitText
           text="Ali Haider"
