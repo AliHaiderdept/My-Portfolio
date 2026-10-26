@@ -1,5 +1,6 @@
 "use client";
 import SplitText from "../SplitText";
+import ParticleSphereCanvas from "../ParticleSphere";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
@@ -28,6 +29,9 @@ export default function Hero() {
       id="home"
       className="isolate relative flex min-h-screen items-center overflow-hidden px-6 md:px-12"
     >
+      <div className="absolute inset-0 z-0 h-full w-full">
+        <ParticleSphereCanvas />
+      </div>
      
       <div className="relative z-10 flex w-full flex-col items-center justify-center gap-2 text-center">
         <SplitText
