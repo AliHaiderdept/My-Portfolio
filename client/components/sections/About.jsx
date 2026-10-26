@@ -1,8 +1,11 @@
 
 "use client";
+import { IoLocationOutline } from "react-icons/io5";
 import BentoGallery from "../BentoGallery";
 import { useRef } from "react";
 import { useSectionReveal } from "../useSectionReveal";
+import { MdCenterFocusWeak } from "react-icons/md";
+import { FaGraduationCap } from "react-icons/fa";
 export default function About() {
     const sectionRef = useRef(null);
     useSectionReveal(sectionRef, ".about-content");
@@ -25,30 +28,39 @@ export default function About() {
 
   {/* Left Content */}
   <div className="flex flex-col gap-6 font-archivo-black">
-    <div className="bg-grey-500 px-10 py-10 border border-white/20">
-      <p className="text-neutral-500 uppercase text-sm">Location</p>
-      <p className="text-white uppercase">Lahore, Pakistan</p>
+    <div className="bg-grey-500 flex items-start gap-5 border border-white/20 px-10 py-10">
+      <div className="flex h-12 w-12 shrink-0 items-center justify-center border border-white/30" aria-hidden="true"><IoLocationOutline /></div>
+      <div className="min-w-0">
+        <p className="text-neutral-500 uppercase text-sm">Location</p>
+        <p className="text-white uppercase">Lahore, Pakistan</p>
+      </div>
     </div>
 
-    <div className="bg-grey-500 px-10 py-10 border border-white/20">
-      <p className="text-neutral-500 uppercase text-sm">Focus</p>
-      <p className="text-white uppercase">
-        Full-stack and AI/ML Engineering
-      </p>
-      <p className="font-geist-mono text-slate-500">Interactive UI/UX, Backend and API Interfaces with trained data assests. </p>
+    <div className="bg-grey-500 flex items-start gap-5 border border-white/20 px-10 py-10">
+      <div className="flex h-12 w-12 shrink-0 items-center justify-center border border-white/30" aria-hidden="true"><MdCenterFocusWeak /></div>
+      <div className="min-w-0">
+        <p className="text-neutral-500 uppercase text-sm">Focus</p>
+        <p className="text-white uppercase">
+          Full-stack and AI/ML Engineering
+        </p>
+        <p className="font-geist-mono text-slate-500">Interactive UI/UX, Backend and API Interfaces with trained data assests. </p>
+      </div>
     </div>
 
-    <div className="bg-grey-500 px-10 py-10 border border-white/20">
-      <p className="text-neutral-500 uppercase text-sm">Education</p>
-      <p className="text-white uppercase">
-        University of Punjab
-        <span className="text-slate-500 text-sm mx-3 border border-white/30 px-2 py-1">
-         current
-        </span>
-      </p>
-      <p className="text-slate-500 mt-4 font-geist-mono">
-          Bachelor&apos;s in Computer Science | (2024 - 28)
-      </p>
+    <div className="bg-grey-500 flex items-start gap-5 border border-white/20 px-10 py-10">
+      <div className="flex h-12 w-12 shrink-0 items-center justify-center border border-white/30" aria-hidden="true"><FaGraduationCap /></div>
+      <div className="min-w-0">
+        <p className="text-neutral-500 uppercase text-sm">Education</p>
+        <p className="text-white uppercase">
+          University of Punjab
+          <span className="text-slate-500 text-sm mx-3 border border-white/30 px-2 py-1">
+           current
+          </span>
+        </p>
+        <p className="text-slate-500 mt-4 font-geist-mono">
+            Bachelor&apos;s in Computer Science | (2024 - 28)
+        </p>
+      </div>
     </div>
   </div>
 

@@ -24,7 +24,7 @@ export default function Footer() {
                         <p className="font-geist-mono text-xs uppercase tracking-[0.22em] text-neutral-500">
                             Explore
                         </p>
-                        <div className="mt-5 flex flex-col items-start gap-3 text-sm text-neutral-300 font-archivo-black">
+                        <div className="mt-5 flex flex-col items-start gap-3 text-sm text-neutral-300 font-geist-mono">
                             <a className="transition-colors hover:text-white" href="#home">Home</a>
                             <a className="transition-colors hover:text-white" href="#about">About</a>
                             <a className="transition-colors hover:text-white" href="#projects">Projects</a>
