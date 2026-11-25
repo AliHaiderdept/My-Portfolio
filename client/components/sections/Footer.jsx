@@ -37,17 +37,17 @@ export default function Footer() {
                         <p className="font-geist-mono text-xs uppercase tracking-[0.22em] text-neutral-500">
                             Connect
                         </p>
-                        <div className="mt-5 flex flex-col items-start gap-3 text-sm text-neutral-300">
-                            <a className="transition-colors border border-white p-3 hover:border-neutral-400 hover:text-white" href="mailto:hello@alihaidermillinium.dev">
+                        <div className="footer-social-links mt-5 flex flex-col items-start gap-3 text-sm text-neutral-300">
+                            <a aria-label="Email Ali Haider" className="transition-colors border border-white p-3 hover:border-neutral-400 hover:text-white" href="mailto:hello@alihaidermillinium.dev">
                                 <CgMail />
                             </a>
-                            <a className="transition-colors border border-white p-3 hover:border-neutral-400 hover:text-white" href="https://github.com/AliHaiderdept" target="_blank" rel="noreferrer">
+                            <a aria-label="Ali Haider on GitHub" className="transition-colors border border-white p-3 hover:border-neutral-400 hover:text-white" href="https://github.com/AliHaiderdept" target="_blank" rel="noreferrer">
                                 <LuGithub />
                             </a>
-                            <a className="transition-colors border border-white p-3 hover:border-neutral-400 hover:text-white" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
+                            <a aria-label="Ali Haider on LinkedIn" className="transition-colors border border-white p-3 hover:border-neutral-400 hover:text-white" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
                                 <PiLinkedinLogoLight />
                             </a>
-                            <a className="transition-colors border border-white p-3 hover:border-neutral-400 hover:text-white" href="https://www.facebook.com/alihaiderofficial952" target="_blank" rel="noreferrer">
+                            <a aria-label="Ali Haider on Facebook" className="transition-colors border border-white p-3 hover:border-neutral-400 hover:text-white" href="https://www.facebook.com/alihaiderofficial952" target="_blank" rel="noreferrer">
                                <TbBrandFacebook /> 
                             </a>
                         </div>

@@ -125,7 +125,7 @@
   font-family: "Archivo Black", "Arial Black", sans-serif;
   font-weight: 900;
   line-height: 0.85;
-  font-size : 181.6px;
+  font-size: clamp(3.5rem, 12.6vw, 181.6px);
   letter-spacing: -0.04em;
   text-transform: uppercase;
   color: rgb(240, 240, 240);
@@ -180,35 +180,6 @@ color: rgb(240, 240, 240);
 }
 
 
-@media (max-width: 900px) {
-  .about-layout {
-    grid-template-columns: 72px minmax(0, 1fr);
-  }
-  .about-copy {
-    grid-column: 2;
-  }
-}
-
-@media (max-width: 640px) {
-  .about-section {
-    padding: 64px 20px;
-  }
-  .about-layout {
-    grid-template-columns: 1fr;
-    gap: 28px;
-  }
-  .about-index {
-    font-size: 88px;
-  }
-  .about-copy {
-    grid-column: auto;
-    font-size: 16px;
-  }
-  .about-card {
-    min-height: 0;
-    padding: 18px;
-  }
-}
 html {
   background: var(--color-background);
   color: var(--color-ink);
@@ -303,8 +274,8 @@ body {
   display: grid;
   grid-template-columns: clamp(120px, 12vw, 190px) minmax(0, 1fr);
   gap: clamp(24px, 2.5vw, 40px);
-  width: min(100%, 1410px);
-  
+  width: min(calc(100% - 3rem), 1410px);
+  margin-inline: auto;
 }
 
 .title-index {
@@ -356,34 +327,8 @@ body {
 
 @media (max-width: 640px) {
   .title-section {
-    min-height: 640px;
-    padding: 48px 20px 80px;
-  }
-
- 
-
-  .title-inner {
-    grid-template-columns: 58px minmax(0, 1fr);
-    gap: 16px;
-  }
-
-  .title-index {
-    writing-mode: horizontal-tb;
-    transform: none;
-    padding-top: 12px;
-    font-size: 58px;
-  }
-
-  .title-label {
-    margin-bottom: 26px;
-    padding: 8px 12px 7px;
-    border-width: 2px;
-    font-size: 11px;
-  }
-
-  .title-title {
-    font-size: clamp(39px, 12vw, 72px);
-    line-height: 0.9;
+    min-height: 0;
+    padding: 48px 16px 64px;
   }
 }
 
@@ -483,5 +428,146 @@ body {
   .bento-gallery {
     gap: 5px;
     padding: 8px;
+  }
+}
+
+/* Mobile layout: make the fixed navigation compact so every link fits on narrow screens. */
+@media (max-width: 640px) {
+  .navbar-shell {
+    width: calc(100% - 24px);
+    justify-content: space-between;
+    gap: 0;
+    padding: 6px;
+    border: 1px solid rgb(255 255 255 / 12%);
+    background: rgb(0 0 0 / 78%);
+    backdrop-filter: blur(12px);
+  }
+
+  .navbar-link {
+    padding: 6px 4px;
+    font-size: 9px;
+    letter-spacing: 0.06em;
+  }
+
+  /* Step 1: narrow the heading grid so the number does not squeeze the title. */
+  .title-inner {
+    grid-template-columns: 44px minmax(0, 1fr);
+    gap: 12px;
+    width: 100%;
+    margin-top: 0;
+  }
+
+  /* Step 2: remove large desktop offsets and scale headings to the screen width. */
+  .title-index,
+  .title-copy {
+    margin-top: 0;
+  }
+
+  .title-index {
+    padding-top: 8px;
+    font-size: clamp(2.5rem, 12vw, 3.5rem);
+  }
+
+  .title-label {
+    margin-bottom: 18px;
+    padding: 8px 10px 7px;
+    border-width: 2px;
+    font-size: 10px;
+  }
+
+  .title-title {
+    font-size: clamp(2.15rem, 9.5vw, 3.75rem);
+    line-height: 0.95;
+    overflow-wrap: anywhere;
+  }
+
+  /* Step 3: reduce padding and gaps in content panels to preserve usable space. */
+  #about .about-content {
+    margin: 28px 0 0;
+    gap: 16px;
+  }
+
+  #about .about-content > div > div {
+    gap: 14px;
+    padding: 20px;
+  }
+
+  #about .about-content > div:last-child > div {
+    padding: 20px;
+  }
+
+  #about .about-content p {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  #certificates .certificates-content {
+    margin: 24px 0 0;
+    padding: 16px 0;
+  }
+
+  #certificates .certificates-content h2 {
+    font-size: 1.5rem;
+  }
+
+  #projects .projects-content {
+    margin: 28px 0 0;
+  }
+
+  /* Step 4: keep the form inside the viewport and make its controls finger-friendly. */
+  #contact .contact-form {
+    margin-top: 28px;
+    padding: 16px;
+  }
+
+  #contact input,
+  #contact textarea,
+  #contact button {
+    min-width: 0;
+    font-size: 16px;
+  }
+
+  footer {
+    padding: 48px 16px 24px;
+  }
+
+  .footer-social-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .footer-social-links a {
+    display: inline-flex;
+    min-width: 44px;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Extra-small phones: avoid squeezing the location and role labels at the hero bottom. */
+@media (max-width: 380px) {
+  .side-content {
+    inset-inline: 16px;
+    bottom: 24px;
+  }
+
+  .left-content,
+  .right-content {
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+
+  .subheading {
+    padding-inline: 8px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    line-height: 1.6;
+  }
+
+  .subtitle {
+    padding-inline: 12px;
+    font-size: 16px;
+    line-height: 1.5;
   }
 }
