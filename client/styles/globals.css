@@ -443,10 +443,18 @@ body {
     backdrop-filter: blur(12px);
   }
 
-  .navbar-link {
-    padding: 6px 4px;
+  .navbar-shell .navbar-link {
+    flex: 1 1 0%;
+    min-width: 0;
+    padding: 6px 2px;
     font-size: 9px;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+
+  /* Hide the decorative numbers so all five navigation labels fit on small phones. */
+  .navbar-shell .navbar-link > span:last-child {
+    display: none;
   }
 
   /* Step 1: narrow the heading grid so the number does not squeeze the title. */

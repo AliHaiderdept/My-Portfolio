@@ -55,7 +55,7 @@ export default function BentoGallery() {
               start: "center center",
               end: "+=100%",
               scrub: 1,
-              pin: gallery.parentElement,
+              pin: gallery.closest(".bento-section"),
               invalidateOnRefresh: true,
             },
           }).add(flip);
